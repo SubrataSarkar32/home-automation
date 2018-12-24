@@ -1,0 +1,20 @@
+﻿1.make connections as in connect2.png
+2.power up using pc via usb
+3.open up arduino ide
+4.Load from File->Examples->Bare Minimum
+5.Verify and upload the file
+6.Open serial monitor
+7.Set NL&CR and baud rate to 115200(this is the default rate)
+8.Now give command ("AT") it should return ("OK") if you don't get anything check other baud rates or else you need to flash the firmware.
+9.Now give command ("AT+CWMODE=1) it set the chip in station mode(client)
+10.Give command("AT+UART_DEF=9600,8,1,0,0") it will change baud rate to 9600
+11.change baud ratee in serial monitor to 9600
+12.Now give command("AT+CWLAP") and see if your home wifi gets listed, if not then turn on your home wifi or try to move closer to your home wifi.
+13.We will try to connect to home wifi network.
+14.Give command ("AT+CWJAP="home_wifi","password") and it will return text if it gets connected, also you could check using your home wifi's page
+15.Let's disconnect, give command("AT+CWQAP") it should return ("OK")
+16.Now , that our wifi module is working let us get into the work, make connections
+as in final.png
+16.Setup blynk app on your andriod/iOS device.
+17.Load the code provided making required changes as mentioned in comments to the arduino borad.(Change the blynk Auth token,wifi name/ssid,password with your own)
+18.Now that your code has been uploaded you can put the device with live circuits, but be careful not to hurt yourself, also you could power the arduino using an adapter. 
